@@ -1,11 +1,125 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Expense Tracker
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A Laravel-based expense tracking application for managing categories and expenses.
+
+## Requirements
+
+- PHP 8.1 or higher
+- Composer
+- Node.js and NPM
+- MySQL or any other supported database
+
+## Installation
+
+Follow these steps to set up the project after cloning or pulling:
+
+### 1. Clone the Repository
+
+```bash
+git clone <repository-url>
+cd expence-tracker
+```
+
+### 2. Install PHP Dependencies
+
+```bash
+composer install
+```
+
+### 3. Install Node Dependencies
+
+```bash
+npm install
+```
+
+### 4. Environment Configuration
+
+Copy the `.env.example` file to `.env`:
+
+```bash
+# Windows (PowerShell)
+copy .env.example .env
+
+# Linux/Mac
+cp .env.example .env
+```
+
+### 5. Generate Application Key
+
+```bash
+php artisan key:generate
+```
+
+### 6. Configure Database
+
+Edit the `.env` file and update the database credentials:
+
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=expence_tracker
+DB_USERNAME=your_username
+DB_PASSWORD=your_password
+```
+
+### 7. Run Database Migrations
+
+```bash
+php artisan migrate
+```
+
+### 8. Build Assets
+
+```bash
+npm run build
+```
+
+For development with hot reload:
+
+```bash
+npm run dev
+```
+
+### 9. Start the Development Server
+
+```bash
+php artisan serve
+```
+
+The application will be available at `http://localhost:8000`
+
+## After Pulling Updates
+
+When pulling updates from the repository, run these commands:
+
+```bash
+# Update PHP dependencies
+composer install
+
+# Update Node dependencies
+npm install
+
+# Run any new migrations
+php artisan migrate
+
+# Rebuild assets
+npm run build
+```
+
+## Features
+
+- **Category Management**: Create, edit, and delete expense categories
+- **Expense Tracking**: Add, edit, and manage expenses
+- **Expense Import**: Import expenses from external sources
+
+## Project Structure
+
+- `app/Http/Controllers/` - Application controllers
+- `app/Models/` - Eloquent models (Category, Expense, User)
+- `database/migrations/` - Database migration files
+- `resources/views/` - Blade templates
+- `routes/web.php` - Web routes
 
 ## About Laravel
 
